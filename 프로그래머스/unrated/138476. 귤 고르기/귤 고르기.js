@@ -1,14 +1,12 @@
 function solution(k, tangerine) {
     var answer = 0;
-    let count = {};
-    tangerine.forEach(e=> e in count ? count[e]++ : count[e]=1)
-    let sort = Object.values(count).sort((a,b)=>b-a);
-    let sum = 0;
-    for(let i of sort){
+    const obj = {};
+    tangerine.forEach((e) => obj[e] = (obj[e] || 0)+1);
+    const arr = Object.values(obj).sort((a,b)=>b-a)
+    for(let i of arr){
         answer++
-        sum+=i
-        if(sum>=k) break
+        if(k>i) k-=i
+        else break
     }
     return answer;
 }
-
