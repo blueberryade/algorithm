@@ -1,10 +1,10 @@
 # [unrated] 문자열 잘라서 정렬하기 - 181866 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181866) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181866?language=python3) 
 
 ### 성능 요약
 
-메모리: 38.7 MB, 시간: 8.88 ms
+메모리: 11.8 MB, 시간: 4.13 ms
 
 ### 구분
 
