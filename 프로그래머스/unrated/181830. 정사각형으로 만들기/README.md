@@ -1,10 +1,10 @@
 # [unrated] 정사각형으로 만들기 - 181830 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181830) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181830?language=python3) 
 
 ### 성능 요약
 
-메모리: 38.6 MB, 시간: 0.04 ms
+메모리: 11.3 MB, 시간: 0.00 ms
 
 ### 구분
 
