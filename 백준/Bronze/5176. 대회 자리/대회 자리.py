@@ -2,12 +2,12 @@ k = int(input())
 
 for _ in range(k):
     p,m = map(int,input().split())
-    lst = list(range(1,m+1))
+    lst = [0]*(m+1)
     cnt = 0
     for _ in range(p):
         num = int(input())
-        if num in lst:
-            lst.remove(num)
-        else:
+        if lst[num]==1:
             cnt+=1
+        else:
+            lst[num]=1
     print(cnt)
