@@ -1,5 +1,5 @@
 n = int(input())
-arr = list(map(int,input().split()))
-m = max(arr)
-newArr = [ i/ m * 100 for i in arr ]
-print(sum(newArr)/n)
+lst = list(map(int,input().split()))
+maxnum = max(lst)
+sum = sum(lst)
+print(sum*100/maxnum/int(n))
