@@ -1,20 +1,19 @@
-from queue import PriorityQueue
-N = int(input())
-pq = PriorityQueue()
+import heapq
 
-for _ in range(N):
-    c = int(input())
-    pq.put(c)
+n = int(input())
 
-data1 = 0
-data2 = 0
-sum = 0
+heap = []
+for i in range(n):
+	data = int(input())
+	heapq.heappush(heap,data)
 
-while pq.qsize()>1:
-    data1 = pq.get()
-    data2 = pq.get()
-    temp = data1+data2
-    sum += temp
-    pq.put(temp)
-    
-print(sum)    
+result = 0
+
+while len(heap)!=1:
+	one = heapq.heappop(heap)
+	two = heapq.heappop(heap)
+	sum_value = one+two
+	result += sum_value
+	heapq.heappush(heap,sum_value)
+
+print(result) 
