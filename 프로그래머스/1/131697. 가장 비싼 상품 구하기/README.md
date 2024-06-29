@@ -1,6 +1,6 @@
 # [level 1] 가장 비싼 상품 구하기 - 131697 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/131697) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/131697?language=mysql) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@ Empty
 
 ### 제출 일자
 
-2024년 2월 6일 12:46:54
+2024년 06월 29일 12:13:59
 
 ### 문제 설명
 
