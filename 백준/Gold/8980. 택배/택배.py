@@ -8,7 +8,7 @@ for _ in range(m):
     s,e,box = map(int,input().split())
     lst.append((s,e,box))
 
-lst.sort()
+lst.sort(key=lambda x:x[1])
 
 capacity = [c]*n
 result = 0
