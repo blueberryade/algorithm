@@ -1,14 +1,10 @@
-import sys
 from collections import deque
 
-input = sys.stdin.readline
+N = int(input())
 
-n = int(input())
-queue = deque([i for i in range(1,n+1)])
+q = deque([i for i in range(1,N+1)])
 
-while (len(queue)>1):
-    queue.popleft()
-    num = queue.popleft()
-    queue.append(num)
-print(queue[0])
-
+while len(q)>1:
+    q.popleft()
+    q.append(q.popleft())
+print(q[0])
