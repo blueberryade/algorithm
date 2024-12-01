@@ -1,16 +1,17 @@
-import sys
-input = sys.stdin.readline
+n,m = map(int,input().split())
+data = list(map(int,input().split()))
 
-N,M = map(int,input().split())
-lst = list(map(int,input().split()))
+start,end,cnt = 0,0,0
 
-S = [0]*(N+1)
-for i in range(1,N+1):
-    S[i] = S[i-1]+lst[i-1]
+while end<n:
+    total = sum(data[start:end+1])
 
-result = 0
-for i in range(1,N+1):
-    for j in range(i,N+1):
-        if S[j] - S[i-1] == M:
-            result+=1
-print(result)
+    if total == m:
+        cnt+=1
+        end+=1
+    elif total > m:
+        start+=1
+    else:
+        end+=1
+
+print(cnt)
