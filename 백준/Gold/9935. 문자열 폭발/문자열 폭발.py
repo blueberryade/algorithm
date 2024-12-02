@@ -1,19 +1,20 @@
 import sys
 input = sys.stdin.readline
 
-word = input().rstrip()
-bomb = input().rstrip()
-
+word = list(input().rstrip())
+bomb = list(input().rstrip())
 stack = []
-bomb_len = len(bomb)
+l = len(bomb)
 
-for w in word:
-    stack.append(w)
-    if ''.join(stack[-bomb_len:]) == bomb:
-        for _ in range(bomb_len):
+
+for i in word:
+    stack.append(i)
+    if stack[-l:] == bomb:
+        for _ in range(l):
             stack.pop()
 
-if stack:        
+
+if stack:
     print(''.join(stack))
 else:
-    print('FRULA')    
+    print('FRULA')
