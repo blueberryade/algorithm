@@ -1,17 +1,18 @@
 import sys
 input = sys.stdin.readline
 
-n,d,k,c = map(int,input().split())
-sushi = [int(input()) for _ in range(n)]
+N,d,k,c = map(int,input().split())
+data = [int(input()) for _ in range(N)]
 
 result = 0
 
-for i in range(n):
-    if i+k > n:
-        cur_cnt = len(set(sushi[i:n] + sushi[:(i+k)%n] + [c]))
+for i in range(N):
+    if i+k > N:
+        cur_cnt = len(set(data[i:N] + data[:(i+k)%N] + [c]))
     else:
-        cur_cnt = len(set(sushi[i:i+k] + [c]))
-    if result < cur_cnt:
-        result = cur_cnt
+        cur_cnt = len(set(data[i:i+k] + [c]))
+    
+    result = max(result,cur_cnt)
         
+
 print(result)
