@@ -1,22 +1,24 @@
-n,s = map(int,input().split())
+import sys
+input = sys.stdin.readline
+
+N,S = map(int,input().split())
 data = list(map(int,input().split()))
 
-left,right = 0,0
-total = 0
-result = 1e9
+result = sys.maxsize
+left,right,total = 0,0,0
 
 while True:
-    if total >=s:
+    if total >= S:
         result = min(result,right-left)
         total -= data[left]
         left+=1
-    elif right == n:
+    elif right == N:
         break
     else:
-        total+= data[right]
+        total+=data[right]
         right+=1
-        
-if result == 1e9:
+
+if result == sys.maxsize:
     print(0)
 else:
     print(result)
