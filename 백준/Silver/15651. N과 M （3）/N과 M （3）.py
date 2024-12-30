@@ -1,13 +1,15 @@
-n,m = map(int,input().split())
+N,M = map(int,input().split())
 
-def backtrack(cur):
-    if len(cur) ==m:
-        print(*cur)
+arr = []
+
+def backtracking():
+    if len(arr) == M:
+        print(*arr)
         return
-    for i in range(1,n+1):
-        cur.append(i)
-        backtrack(cur)
-        cur.pop()
+    
+    for i in range(1,N+1):
+        arr.append(i)
+        backtracking()
+        arr.pop()
 
-backtrack([])
-
+backtracking()
